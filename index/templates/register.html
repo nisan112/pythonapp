@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fc;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        form p {
+            margin: 15px 0;
+        }
+
+        form input,
+        form select,
+        form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        form button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        form button:hover {
+            background-color: #45a049;
+        }
+
+        .btn {
+            text-align: center;
+            margin-top: 10px;
+            display: inline-block;
+            color: #007BFF;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .btn:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+                width: 90%;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Register</h1>
+        <form method="post" onsubmit="return validateForm()">
+            {% csrf_token %}
+            {{ form.as_p }} <!-- This keeps Django's automatic form rendering as paragraphs -->
+            <button type="submit">Register</button>
+        </form>
+        <a href="{% url 'login' %}" class="btn">Already have an account? Login here</a>
+    </div>
+
+    <script>
+        function validateForm() {
+            const fullName = document.querySelector('[name="full_name"]').value.trim();
+            const address = document.querySelector('[name="address"]').value.trim();
+            const age = document.querySelector('[name="age"]').value.trim();
+
+            if (!fullName || !address || !age) {
+                alert('Please fill in all fields!');
+                return false;
+            }
+            if (isNaN(age) || age <= 0) {
+                alert('Please enter a valid age!');
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>
