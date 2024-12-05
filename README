@@ -1,5 +1,5 @@
 THIS IS OFFICIAL README FILE
-
+<!DOCTYPE HTML>
 This is a official Daily blog django app
 It has authentication features like registration,login,logout made with in-built django feature
 User can login as user or admin.
@@ -16,3 +16,4 @@ after that enter credentials
 Run server:
 "python manage.py runserver" in cli
 and go to hosted port
+</HTML>
