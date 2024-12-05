@@ -66,7 +66,6 @@
             <li><strong>index/views.py</strong>: Contains the views that handle the app's logic for the index page.</li>
             <li><strong>index/urls.py</strong>: App-specific URL routing for the index app.</li>
             <li><strong>index/templates/</strong>: HTML templates for rendering the index page and other related pages.</li>
-            <li><strong>index/static/</strong>: Static files like CSS, JavaScript, and images for the index app.</li>
         </ul>
     </li>
     <li><strong>db.sqlite3</strong>: Default SQLite database file (you can switch to PostgreSQL or MySQL for production).</li>
