@@ -21,8 +21,8 @@
         <pre><code>python -m venv venv</code></pre>
     </li>
     <li>Activate the virtual environment:
-        <pre><code>source venv/bin/activate  <!-- For Mac/Linux -->
-        venv\Scripts\activate  <!-- For Windows --></code></pre>
+        <pre><code>source venv/bin/activate  (for mac/linux)
+        venv\Scripts\activate (for windows) </code></pre>
     </li>
     <li>Install Django within the virtual environment:
         <pre><code>pip install django</code></pre>
