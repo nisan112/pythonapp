@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Official Daily Blog Django App</title>
+    
 </head>
 <body>
 
@@ -70,6 +70,7 @@
     </li>
     <li><strong>db.sqlite3</strong>: Default SQLite database file (you can switch to PostgreSQL or MySQL for production).</li>
 </ul>
+<b>Requirement.txt and Dockerfile are for containerization and deployment, not neede for development</b>
 
 <h3>Contributing</h3>
 <p>If you'd like to contribute to the development of this project, feel free to fork the repository, make your changes, and submit a pull request.</p>
