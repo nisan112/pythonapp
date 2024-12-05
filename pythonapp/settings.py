@@ -127,3 +127,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_URL = 'login'  # URL for the login page
 LOGIN_REDIRECT_URL = 'home'  # Redirect to homepage after successful login
 LOGOUT_REDIRECT_URL = 'login'  # Redirect to login page after logging out
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://blogappv1.azurewebsites.net',
+]
